@@ -13,6 +13,7 @@ public class Tether : MonoBehaviour
     {
         rend = GetComponent<LineRenderer>();
         col = GetComponent<EdgeCollider2D>();
+        
     }
 
     private void Update()

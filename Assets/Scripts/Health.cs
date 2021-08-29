@@ -24,6 +24,6 @@ public class Health : MonoBehaviour
     void TakeDamageRPC()
     {
         health -= 1;
-        healthDisplay.text = health.ToString();
+        healthDisplay.text = "Health: " + health.ToString();
     }
 }
