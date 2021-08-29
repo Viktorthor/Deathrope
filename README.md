@@ -1,4 +1,4 @@
-# Deathrope
+# About Deathrope
 
 A small Unity project made for fun which showcases multiplayer functionality using Photon Unity Networking (PUN).
 
@@ -7,7 +7,7 @@ You must use the Deathrope along with your wits to slay your enemies as they cha
 
 Simply create a room and share your room code with a friend and see how far you can get!
 
-## This is a work in progress and does not reflect the final project. All animations, graphics and visuals have yet to be overhauled. 
+## This is a work in progress and does not reflect the final project/product.
 
 
-V0.3 Bugfix - The collider (rope) now always snaps to both players upon joining a room.
+29.08.21 - V0.3 Bugfix - The collider (rope) now always snaps to both players upon joining a room.
