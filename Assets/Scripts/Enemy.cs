@@ -8,10 +8,12 @@ public class Enemy : MonoBehaviour
     PlayerController[] players;
     PlayerController nearestPlayer;
     public float speed;
+    ScoreManager score;
 
     private void Start()
     {
         players = FindObjectsOfType<PlayerController>();
+        score = FindObjectOfType<ScoreManager>();
     }
 
     private void Update()
@@ -40,6 +42,7 @@ public class Enemy : MonoBehaviour
             if (collision.tag == "Tether")
             {
                 PhotonNetwork.Destroy(this.gameObject);
+                score.AddScore();
             }
         }
     }

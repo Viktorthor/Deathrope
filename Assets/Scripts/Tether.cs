@@ -13,7 +13,6 @@ public class Tether : MonoBehaviour
     {
         rend = GetComponent<LineRenderer>();
         col = GetComponent<EdgeCollider2D>();
-        
     }
 
     private void Update()
@@ -21,6 +20,8 @@ public class Tether : MonoBehaviour
         linePoints[0] = rend.GetPosition(0);
         linePoints[1] = rend.GetPosition(1);
         col.SetPoints(linePoints);
+
     }
+
 }
 
