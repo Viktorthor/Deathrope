@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject enemy;
     public float startTimeBtwSpawns;
+    public float enemySpeed = 3;
+    float speedUp = 10;
     float timeBtwSpawns;
 
     private void Start()
@@ -30,6 +32,16 @@ public class Spawner : MonoBehaviour
         } else
         {
             timeBtwSpawns -= Time.deltaTime;
+        }
+
+        if(speedUp > 0)
+        {
+            speedUp -= Time.deltaTime;
+        }
+        else
+        {
+            enemySpeed++;
+            speedUp = 10;
         }
     }
 }

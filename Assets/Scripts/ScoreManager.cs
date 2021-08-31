@@ -7,7 +7,7 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    int score = 0;
+    public int score = 0;
     PhotonView view;
     public TextMeshProUGUI scoreDisplay;
 
@@ -15,6 +15,7 @@ public class ScoreManager : MonoBehaviour
     {
         view = GetComponent<PhotonView>();
     }
+
 
     public void AddScore()
     {

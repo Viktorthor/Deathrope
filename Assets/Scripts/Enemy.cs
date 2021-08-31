@@ -7,17 +7,20 @@ public class Enemy : MonoBehaviour
 
     PlayerController[] players;
     PlayerController nearestPlayer;
-    public float speed;
+    float speed;
     ScoreManager score;
+    Spawner gameManager;
 
     private void Start()
     {
         players = FindObjectsOfType<PlayerController>();
         score = FindObjectOfType<ScoreManager>();
+        gameManager = FindObjectOfType<Spawner>();
     }
 
     private void Update()
     {
+        speed = gameManager.enemySpeed;
         float distanceOne = Vector2.Distance(transform.position, players[0].transform.position);
         float distanceTwo = Vector2.Distance(transform.position, players[1].transform.position);
 
