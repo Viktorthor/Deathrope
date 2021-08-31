@@ -626,7 +626,6 @@ LineRenderer:
   m_Materials:
   - {fileID: 2100000, guid: a52bb92af4c0f474cb9fb959673e4308, type: 2}
   - {fileID: 2100000, guid: 29636ed120183fd4b963568cb408984c, type: 2}
-  - {fileID: 2100000, guid: 58ae2d6eb26b8ab43b84bb8e81f5ce0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
