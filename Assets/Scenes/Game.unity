@@ -1401,6 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395a540999592234d99f5d429608c5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   scoreDisplay: {fileID: 579217400}
 --- !u!4 &1449831515
 Transform:
@@ -1678,6 +1679,7 @@ MonoBehaviour:
   - {fileID: 595786240}
   enemy: {fileID: 779610551903659677, guid: 6601803015d4c534795e5058fcabd9a2, type: 3}
   startTimeBtwSpawns: 3
+  enemySpeed: 3
 --- !u!4 &2119995989
 Transform:
   m_ObjectHideFlags: 0
