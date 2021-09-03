@@ -11,3 +11,5 @@ Simply create a room and share your room code with a friend and see how far you 
 
 
 29.08.21 - V0.3 Bugfix - The collider (rope) now always snaps to both players upon joining a room.
+
+31.08.21 - V0.5 Feature - The enemies now speed up every 10 seconds! 
