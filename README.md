@@ -7,9 +7,13 @@ You must use the Deathrope along with your wits to slay your enemies as they cha
 
 Simply create a room and share your room code with a friend and see how far you can get!
 
+Use the WASD keys to move and SPACE to dash.
+
 ## This is a work in progress and does not reflect the final project/product.
 
 
 29.08.21 - V0.3 Bugfix - The collider (rope) now always snaps to both players upon joining a room.
 
 31.08.21 - V0.5 Feature - The enemies now speed up every 10 seconds! 
+
+03.09.21 - V0.7 Feature - Dash feature added, screenwrap active.
