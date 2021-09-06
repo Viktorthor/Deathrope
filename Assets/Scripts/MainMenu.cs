@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviourPunCallbacks
 
     public InputField createInput;
     public InputField joinInput;
+    public InputField nickNameInput;
 
     public void CreateRoom()
     {
@@ -26,6 +27,11 @@ public class MainMenu : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         PhotonNetwork.LoadLevel("Game");
+    }
+
+    public void SetNickname()
+    {
+        PhotonNetwork.NickName = nickNameInput.text;
     }
 
 }

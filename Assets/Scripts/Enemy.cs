@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 public class Enemy : MonoBehaviour
@@ -10,9 +8,13 @@ public class Enemy : MonoBehaviour
     float speed;
     ScoreManager score;
     Spawner gameManager;
+    PhotonView view;
+
+    public GameObject deathFX;
 
     private void Start()
     {
+        view = GetComponent<PhotonView>();
         players = FindObjectsOfType<PlayerController>();
         score = FindObjectOfType<ScoreManager>();
         gameManager = FindObjectOfType<Spawner>();
@@ -21,6 +23,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         speed = gameManager.enemySpeed;
+
         float distanceOne = Vector2.Distance(transform.position, players[0].transform.position);
         float distanceTwo = Vector2.Distance(transform.position, players[1].transform.position);
 
@@ -36,6 +39,7 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, nearestPlayer.transform.position, speed * Time.deltaTime);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,9 +48,16 @@ public class Enemy : MonoBehaviour
         {
             if (collision.tag == "Tether")
             {
-                PhotonNetwork.Destroy(this.gameObject);
                 score.AddScore();
+                view.RPC("SpawnFX", RpcTarget.All);
+                PhotonNetwork.Destroy(this.gameObject);
             }
         }
+    }
+
+    [PunRPC]
+    void SpawnFX()
+    {
+        Instantiate(deathFX, transform.position, Quaternion.identity);
     }
 }

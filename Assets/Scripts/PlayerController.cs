@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed;
     public float dashTime;
     public float minX, maxX, minY, maxY;
+    public Text nameDisplay;
 
     PhotonView view;
     Animator anim;
@@ -23,6 +25,14 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         healthScript = FindObjectOfType<Health>();
         rend = FindObjectOfType<LineRenderer>();
+
+        if (view.IsMine)
+        {
+            nameDisplay.text = PhotonNetwork.NickName;
+        } else
+        {
+            nameDisplay.text = view.Owner.NickName;
+        }
     }
 
     private void Update()

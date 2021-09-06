@@ -552,7 +552,7 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 2
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
@@ -571,6 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44c0c724d2c302443818170e85c4fd5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathFX: {fileID: 3911692008073732952, guid: 0c58783995aeeea4a9d2a60d362cce9b, type: 3}
 --- !u!61 &1955808669534612610
 BoxCollider2D:
   m_ObjectHideFlags: 0

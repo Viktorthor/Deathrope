@@ -9,8 +9,8 @@ public class Spawner : MonoBehaviour
     public GameObject enemy;
     public float startTimeBtwSpawns;
     public float enemySpeed = 3;
-    float speedUp = 10;
     float timeBtwSpawns;
+    float speedCount = 0;
 
     private void Start()
     {
@@ -28,20 +28,16 @@ public class Spawner : MonoBehaviour
         {
             Vector3 spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
             PhotonNetwork.Instantiate(enemy.name, spawnPosition, Quaternion.identity);
-            timeBtwSpawns = startTimeBtwSpawns;
-        } else
-        {
-            timeBtwSpawns -= Time.deltaTime;
-        }
-
-        if(speedUp > 0)
-        {
-            speedUp -= Time.deltaTime;
-        }
+            timeBtwSpawns = startTimeBtwSpawns - speedCount;
+            if(speedCount < 1.8)
+            {
+                speedCount += 0.15f;
+                Debug.Log(speedCount);
+            }
+        } 
         else
         {
-            enemySpeed++;
-            speedUp = 10;
+            timeBtwSpawns -= Time.deltaTime;
         }
     }
 }

@@ -10,20 +10,31 @@ public class Health : MonoBehaviour
     public TextMeshProUGUI healthDisplay;
 
     PhotonView view;
+    public GameObject gameOver;
 
     private void Start()
     {
         view = GetComponent<PhotonView>();
+        Time.timeScale = 1.0f;
+        PhotonNetwork.MinimalTimeScaleToDispatchInFixedUpdate = 0f;
     }
 
     public void TakeDamage()
     {
         view.RPC("TakeDamageRPC", RpcTarget.All);
     }
+
     [PunRPC]
     void TakeDamageRPC()
     {
-        health -= 1;
+        if (health <= 0)
+        {
+            gameOver.SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+
         healthDisplay.text = "Health: " + health.ToString();
+        health -= 1;
+        
     }
 }
