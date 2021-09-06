@@ -14,6 +14,8 @@ Use the WASD keys to move and SPACE to dash.
 
 29.08.21 - V0.3 Bugfix - The collider (rope) now always snaps to both players upon joining a room.
 
-31.08.21 - V0.5 Feature - The enemies now speed up every 10 seconds! 
+31.08.21 - V0.5 Feature - The enemies now speed up as time passes! 
 
 03.09.21 - V0.7 Feature - Dash feature added, screenwrap active.
+
+06.09.21 - V1.0 Features & fixes - Nicknames added, particle effect on enemy death added. Still same art since the week I gave myself to finish it is over. On to the next project. For now this project will remain dormant.
