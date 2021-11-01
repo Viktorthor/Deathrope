@@ -2,6 +2,8 @@
 
 A small Unity project made for fun which showcases multiplayer functionality using Photon Unity Networking (PUN).
 
+https://viktorthor.itch.io/deathrope
+
 A simple co-op game where the aim is to survive.  See how long you can survive against waves and hordes of enemies as you and your friend are bound together by the Deathrope!
 You must use the Deathrope along with your wits to slay your enemies as they charge towards you with increasing speed and numbers.
 
